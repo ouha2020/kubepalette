@@ -7,5 +7,7 @@ import (
 
 func main() {
 	r := initializes.Routers()
-	r.Run(global.CONF.System.Addr)
+	initializes.Viper()
+	initializes.K8s()
+	panic(r.Run(global.CONF.System.Addr))
 }

@@ -1,7 +1,11 @@
 package global
 
-import "question.com/config"
+import (
+	"k8s.io/client-go/kubernetes"
+	"question.com/config"
+)
 
 var (
-	CONF config.Server
+	CONF          config.Server
+	KubeConfigset *kubernetes.Clientset
 )
